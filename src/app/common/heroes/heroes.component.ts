@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { HeroService } from '../../service/hero.service';
+import { Hero } from '../../model/hero';
 
 @Component({
   selector: 'app-heroes',
@@ -7,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  id: number =0;
-  name: string = "";
-  superPower: string = "";
-  address: string = "";
 
+  heroList$: BehaviorSubject<Hero[]> = this.heroService.list$;
 
-  constructor() { }
+  constructor(private heroService: HeroService) {
+
+   }
 
   ngOnInit(): void {
+    this.heroService.getAll();
   }
 
 }

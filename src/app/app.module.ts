@@ -12,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 
-export const appRoutes: Routes = [
+/* export const appRoutes: Routes = [
   {
       path: '',
       component: HomeComponent
@@ -25,7 +25,7 @@ export const appRoutes: Routes = [
       path: '**',
       component: HomeComponent,
   }
-];
+]; */
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ export const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
+//    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
