@@ -7,7 +7,7 @@ import { Hero } from '../model/hero';
 })
 export class HeroService {
 
-  private list: Hero[] = [{
+   list: Hero[] = [{
     id: 1,
     name: 'Spiderman',
     superPower: 'jump bigspider',

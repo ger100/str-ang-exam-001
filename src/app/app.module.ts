@@ -9,6 +9,9 @@ import { HomeComponent } from './common/home/home.component';
 import { HeroesComponent } from './common/heroes/heroes.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { FilterPipe } from './pipe/filter.pipe';
+
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -32,12 +35,14 @@ import { RouterModule, Routes } from '@angular/router';
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    HeroesComponent
+    HeroesComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 //    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
